@@ -1,0 +1,132 @@
+@media screen and (max-width: 800px) {
+	.menu-item-container {
+		position: relative;
+		z-index: 5;
+		/*height: 100%;*/
+		display: flex;
+		/*flex-grow: 1;*/
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sub-menu {
+		/*position: absolute;*/
+		background-color: #484848;
+	    color: white;
+	    max-height: 0;
+	    /*only need overflow if transitioning height*/
+	    overflow: hidden;
+	    /*transition: transform 1000ms;*/
+	    list-style: none;
+	    padding-left: 0;
+	    width: 100%;
+	    text-align: center;
+	    transition: max-height 750ms;
+	}
+
+	.sub-menu.show-sub-menu {
+		display: block;
+		/*transform: translateY(10vh);*/
+		max-height: 40vh;
+	}
+
+	.menu-item-container:hover .sub-menu {
+		display: block;
+		/*transform: translateY(10vh);*/
+		max-height: 40vh;
+		/*z-index: 0;*/
+	}
+
+	.sub-menu-item {
+		margin-top: 5%;
+		margin-bottom: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.link {
+		text-decoration: none;
+		color: white;
+		width: 100%;
+		/*padding-left: 2%;*/
+	}
+
+}
+
+
+
+
+
+@media screen and (min-width: 800px) {
+	.menu-item-container {
+		position: relative;
+		z-index: 5;
+		height: 100%;
+		display: flex;
+		/*flex-grow: 1;*/
+	}
+
+	.sub-menu {
+	    z-index: -1;
+		position: absolute;
+		background-color: #484848;
+	    color: white;
+	    max-height: 0;
+	    /*only need overflow if transitioning height*/
+	    overflow: hidden;
+	    /*transition: transform 1000ms;*/
+	    list-style: none;
+	    padding-left: 0;
+	    width: 250%;
+	    left: -75%;
+	    text-align: center;
+	    transition: max-height 750ms;
+	    transform: translateY(12vh);
+	}
+
+	.sub-menu.show-sub-menu {
+		display: block;
+		/*transform: translateY(10vh);*/
+		max-height: 40vh;
+	}
+
+	.menu-item-container:hover .sub-menu {
+		display: block;
+		/*transform: translateY(10vh);*/
+		max-height: 40vh;
+		z-index: 0;
+	}
+
+	.sub-menu-item {
+		margin-top: 5%;
+		margin-bottom: 5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.menuAnimationEnter {
+		transform: translateY(-100%);
+	}
+		
+	.menuAnimationEnterActive {
+		transform: translateY(0);
+	    transition: transform 1000ms;
+	}
+
+	.menuAnimationExit {
+		transform: translateY(0);
+	}
+
+	.menuAnimationExitActive {
+		transform: translateY(-100%);
+	    transition: transform 1000ms;
+	}
+
+	.link {
+		text-decoration: none;
+		color: white;
+		width: 100%;
+		/*padding-left: 2%;*/
+	}	
+}

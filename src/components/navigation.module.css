@@ -1,0 +1,226 @@
+/*.nav-list {
+	padding-left: 0;
+	width: 50%;
+}
+
+.nav-list li {
+	list-style: none;
+}
+*/
+/*.contact-form-div {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: left;
+	width: 50%;
+	/*flex-wrap: wrap;*/
+	/*margin-top: 5%;
+	padding-right: 2%;*/
+/*}*/
+
+/*possible contact page button css
+    background-color: purple;
+    white-space: nowrap;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;*/
+   
+
+@media screen and (max-width: 800px) {
+	.nav-menu-container {
+		z-index: 5;
+		position: fixed;
+		top: 10vh;
+		/*left: -110%;*/
+		left: 0;
+		height: 0;
+		width: 100%;
+		background-color: #484848;
+		transition: height 1s;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	    color: white;
+	    max-width: 500px;
+	}
+
+	.nav-menu-container.show-responsive-menu {
+		overflow-y: scroll;	
+		height: 90vh;				
+	}
+
+	.nav-menu {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	    align-items: center;
+	    justify-content: start;
+	    /*height: 50%;*/
+	    width: 100%;
+	    padding-left: 0;
+	    margin-top: 0;
+	}
+
+	.nav-menu-item {
+		display: flex;
+	    align-items: center;
+	    flex-direction: column;
+	    cursor: pointer;
+	    /*flex-grow: 1;*/
+	    width: 100%;
+	    min-height: 10vh;
+	}
+
+	.li:hover {
+		background-color: #5b58a5;
+	}
+
+	.nav-button {
+		padding: 0;
+		width: 100%;
+		height: 10vh;
+	}
+
+	.link {
+		text-decoration: none;
+		color: white;
+		width: 100%;
+		/*padding-left: 2%;*/
+	}
+
+	.open-menu-button {
+		border: none;
+    	background-color: transparent;
+    	font-size: 2.5em;
+    	cursor: pointer;
+	}
+
+	.close-menu-button {
+		border: none;
+    	background-color: transparent;
+    	font-size: 2.5em;
+    	cursor: pointer;
+	}
+
+	:global(#get-in-touch) {
+		display: flex;
+    	align-items: center;
+    	justify-content: space-around;
+		background-color: purple;
+	    white-space: nowrap;
+	    margin-top: 10%;
+	    margin-bottom: 10%;
+	    border-radius: 10px;
+	    padding-left: 5%;
+	    padding-right: 5%;
+	    color: white;
+	    width: 50%;	
+	    text-decoration: none;
+	}
+
+	/*:global(#get-in-touch) {
+		display: flex;
+    	align-items: center;
+    	text-decoration: none;
+    	height: 70%;
+		background-color: purple;
+	    white-space: nowrap;
+	    margin-top: 10%;
+	    margin-bottom: 10%;
+	    border-radius: 10px;
+	    padding-left: 5%;
+	    padding-right: 5%;
+	    color: white;	
+	}*/
+}
+
+@media screen and (min-width: 800px) {
+	nav {
+		width: 50%;
+		height: 100%;
+	}
+	
+	.nav-menu-container {
+		/*list-style: none;*/
+		width: 100%;
+		/*padding-left: 3%;
+		padding-right: 3%;*/
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/*margin-top: 5%;*/
+		/*flex-wrap: wrap;*/
+		height: 100%;
+	}
+
+	.nav-menu {
+		list-style: none;
+		display: flex;
+		/*flex-wrap: wrap;*/
+		/*height: 50%;*/
+		justify-content: space-between;
+	    align-items: center;
+	    padding-left: 0;
+	    margin: 0;
+	    height: 100%;
+	}
+
+	.nav-menu-item {
+		display: flex;
+	    align-items: center;
+	    cursor: pointer;
+	    height: 100%;
+	    /*flex-grow: 1;*/
+	}
+
+	.nav-button {
+		border: none;
+		/*background-color: white;
+		color: black;*/
+		background-color: transparent;
+		color: white;
+		cursor: pointer;
+		font-size: 1.1em;
+		padding: 0;
+		/*text-align: right;*/
+		width: 100%;
+	}
+
+	.nav-button.active {
+		color: #484848;
+	}
+
+	.link {
+		text-decoration: none;
+		color: white;
+		width: 100%;
+		/*padding-left: 2%;*/
+	}
+
+	.close-menu-button {
+		display: none;
+	}
+
+	.open-menu-button {
+		display: none;
+	}
+
+	:global(#get-in-touch) {
+		display: flex;
+    	align-items: center;
+    	text-decoration: none;
+    	height: 70%;
+		background-color: purple;
+	    white-space: nowrap;
+	    /*margin-top: 10%;
+	    margin-bottom: 10%;*/
+	    border-radius: 10px;
+	    padding-left: 5%;
+	    padding-right: 5%;
+	    color: white;	
+	}
+}
